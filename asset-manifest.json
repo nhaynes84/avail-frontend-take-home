@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/avail-frontend-take-home/static/css/main.aaf6a1b7.chunk.css",
+    "main.js": "/avail-frontend-take-home/static/js/main.a27a75c5.chunk.js",
+    "main.js.map": "/avail-frontend-take-home/static/js/main.a27a75c5.chunk.js.map",
+    "runtime-main.js": "/avail-frontend-take-home/static/js/runtime-main.48253805.js",
+    "runtime-main.js.map": "/avail-frontend-take-home/static/js/runtime-main.48253805.js.map",
+    "static/css/2.83342f34.chunk.css": "/avail-frontend-take-home/static/css/2.83342f34.chunk.css",
+    "static/js/2.be39bc15.chunk.js": "/avail-frontend-take-home/static/js/2.be39bc15.chunk.js",
+    "static/js/2.be39bc15.chunk.js.map": "/avail-frontend-take-home/static/js/2.be39bc15.chunk.js.map",
+    "static/js/3.a3fd20c7.chunk.js": "/avail-frontend-take-home/static/js/3.a3fd20c7.chunk.js",
+    "static/js/3.a3fd20c7.chunk.js.map": "/avail-frontend-take-home/static/js/3.a3fd20c7.chunk.js.map",
+    "index.html": "/avail-frontend-take-home/index.html",
+    "static/css/2.83342f34.chunk.css.map": "/avail-frontend-take-home/static/css/2.83342f34.chunk.css.map",
+    "static/css/main.aaf6a1b7.chunk.css.map": "/avail-frontend-take-home/static/css/main.aaf6a1b7.chunk.css.map",
+    "static/js/2.be39bc15.chunk.js.LICENSE.txt": "/avail-frontend-take-home/static/js/2.be39bc15.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.48253805.js",
+    "static/css/2.83342f34.chunk.css",
+    "static/js/2.be39bc15.chunk.js",
+    "static/css/main.aaf6a1b7.chunk.css",
+    "static/js/main.a27a75c5.chunk.js"
+  ]
+}
