@@ -1,0 +1,3 @@
+export const GET_BOOKINGS = 'GET_BOOKINGS'
+export const GET_LISTINGS = 'GET_LISTINGS'
+export const PAIR_LISTING = 'PAIR_LISTING'
