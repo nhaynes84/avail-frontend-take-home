@@ -44,8 +44,8 @@ function App({
         Bookings
       </header>
       {!bookings.length && <div>Loading...</div>}
-      <div className="container">
-        {bookings && <div className="Bookings">
+      <main className="container">
+        {bookings && <div role="listbox" className="Bookings">
           {bookings
             .filter(booking => booking.status === 'upcoming')
             .map(booking =>
@@ -61,7 +61,10 @@ function App({
           handleClose={() => setSelectedBooking(null)}
           label="Listings"
         >
-          {selectedBooking && <div className="Listings">
+          {selectedBooking && <div
+            role="listbox"
+            className="Listings"
+          >
             {!filteredListings.length && <p>No matches found.</p>}
             {filteredListings.map(listing =>
               <Listing
@@ -74,7 +77,7 @@ function App({
               />)}
           </div>}
         </Modal>
-      </div>
+      </main>
       <ToastContainer />
     </div>
   );
