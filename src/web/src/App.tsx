@@ -10,6 +10,7 @@ import Listing from './Listing';
 
 import './App.css';
 import { getBookings, getListings, pairListing } from './store/actionCreators';
+import { listingIsAvailableForDuration } from './helpers';
 
 type Props = {
   listings: Listing[];
@@ -28,6 +29,14 @@ function App({
     !bookings.length && getBookings();
     !listings.length && getListings();
   })
+
+  const filteredListings = !selectedBooking
+    ? listings
+    : listings.filter(
+      listing => listing.status === 'current'
+        && listing.category === selectedBooking.category
+        && listingIsAvailableForDuration(listing, selectedBooking)
+    );
 
   return (
     <div className="App">
@@ -53,24 +62,16 @@ function App({
           label="Listings"
         >
           {selectedBooking && <div className="Listings">
-            {!listings.filter(
-              listing => listing.status === 'current'
-                && listing.category === selectedBooking.category
-            ).length && <p>No matches found.</p>}
-            {listings.length && listings
-              .filter(
-                listing => listing.status === 'current'
-                  && listing.category === selectedBooking.category
-              )
-              .map(listing =>
-                <Listing
-                  selectedBooking={selectedBooking}
-                  key={listing.listingId}
-                  pairListing={pairListing}
-                  setSelectedBooking={setSelectedBooking}
-                  listing={listing}
-                  notify={(message: string) => toast(message)}
-                />)}
+            {!filteredListings.length && <p>No matches found.</p>}
+            {filteredListings.map(listing =>
+              <Listing
+                selectedBooking={selectedBooking}
+                key={listing.listingId}
+                pairListing={pairListing}
+                setSelectedBooking={setSelectedBooking}
+                listing={listing}
+                notify={(message: string) => toast(message)}
+              />)}
           </div>}
         </Modal>
       </div>
