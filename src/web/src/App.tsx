@@ -46,8 +46,7 @@ function App({
       {!bookings.length && <div>Loading...</div>}
       <main className="container">
         {bookings && <div role="listbox" className="Bookings">
-          {bookings
-            .filter(booking => booking.status === 'upcoming')
+          {bookings.filter(booking => booking.status === 'upcoming')
             .map(booking =>
               <Booking
                 key={booking.bookingId}

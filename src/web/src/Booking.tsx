@@ -12,9 +12,9 @@ function Booking({
     return (
         <div className="Booking" key={booking.bookingId}>
             <div className="booking-img">
-                <button onClick={() => {
-                    setSelectedBooking(booking);
-                }}><img alt="jku" src={jku} /></button>
+                <button onClick={() => setSelectedBooking(booking)}>
+                    <img alt="jku" src={jku} />
+                </button>
                 <h6 className="category-label">Vehicle Category</h6>
                 <h4 className="category">{booking.category}</h4>
             </div>

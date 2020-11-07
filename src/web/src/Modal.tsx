@@ -6,13 +6,14 @@ interface ModalProps {
     label: string;
     children: React.ReactNode | React.ReactNode[]
 }
-const Modal = ({ handleClose, show, children, label }: ModalProps) => {
-    const showHideClassName = show ? "modal display-block" : "modal display-none";
 
+function Modal({ handleClose, show, children, label }: ModalProps) {
     return (
-        <div className={showHideClassName}>
+        <div className={show ? "modal display-block" : "modal display-none"}>
             <section className="modal-main">
-                <button className="close" onClick={() => handleClose()}>Close</button>
+                <button className="close" onClick={() => handleClose()}>
+                    Close
+                </button>
                 {children}
             </section>
         </div>
